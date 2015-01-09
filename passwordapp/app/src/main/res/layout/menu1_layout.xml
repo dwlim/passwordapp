@@ -1,6 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:columnCount="2"
+    android:rowCount="10">
 
-</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="528dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/favColor"
+        android:hint="blue"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/favFood"
+        android:layout_gravity="center_horizontal"
+        android:hint="pizza"
+        android:layout_below="@+id/favColor"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/favPet"
+        android:layout_gravity="center_horizontal"
+        android:hint="dog"
+        android:layout_below="@+id/favFood"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/capitalCount"
+        android:hint="capital"
+        android:layout_above="@+id/generatePW"
+        android:layout_toLeftOf="@+id/specialCount"
+        android:layout_toStartOf="@+id/specialCount" />
+
+    <EditText
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/specialCount"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="special"
+        android:layout_below="@+id/favPet" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate PassWord"
+        android:id="@+id/generatePW"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/specialCount"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtOutput"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/generatePW"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/specialCount"
+        android:layout_alignEnd="@+id/specialCount" />
+
+</RelativeLayout>
